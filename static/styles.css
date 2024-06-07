@@ -1,0 +1,30 @@
+.sidebar {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #333;
+	padding-top: 20px;
+}
+
+.sidebar a {
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 18px;
+	color: white;
+	displays: block;
+}
+
+.sidebar a:hover{
+	background-color: #555;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* or column, depending on your layout */
+    justify-content: space-between; /* or other values like center, flex-start, flex-end */
+    align-items: flex-start; /* or other values like center, flex-start, flex-end */
+}
+
+

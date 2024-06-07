@@ -9,11 +9,13 @@ import (
 
 
 func handler(w http.ResponseWriter, r *http.Request){
-	fmt.Fprint(w, "Hello, World!")
+	http.ServeFile(w, r, "index.html")
 }
 
 func main(){
 	http.HandleFunc("/", handler)
+
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("static"))))
 	fmt.Println("Server is running on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
