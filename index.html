@@ -10,22 +10,23 @@
 
 	</head>
 	<body>
-		<div class="sidebar container">
-			<a href="#">Home</a>
-		    	<a href="#">About</a>
-    			<a href="#">Services</a>
-    			<a href="#">Contact</a>
+		
+		<div class="top-level">
+			
+			<div class="sidebar">
+				<button id="new-note-btn"
+					hx-post="/add-note"
+					hx-trigger="click"
+					hx-target="#note-list"
+					hx-swap="afterbegin">
+					Add Note
+				</button>	
+				
+				<ul id="note-list">
+					<!-- New Notes Here -->
+				</ul>
+			</div>
 		</div>
-
-		<div id="editor" class"container">
-			<h2>Demo Content</h2>
-			<p>Preset build with <code>snow</code> theme, and some common formats.</p>
-		</div>
-
-		<script>
-			const quill = new Quill('#editor',{
-				theme: 'snow'
-			});
-		</script>
+		<script src="/static/script.js"></script>
 	</body>
 </html>

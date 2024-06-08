@@ -1,4 +1,5 @@
 .sidebar {
+	float: left;
 	height: 100%;
 	width: 250px;
 	position: fixed;
@@ -20,11 +21,7 @@
 	background-color: #555;
 }
 
-.container {
-    display: flex;
-    flex-direction: row; /* or column, depending on your layout */
-    justify-content: space-between; /* or other values like center, flex-start, flex-end */
-    align-items: flex-start; /* or other values like center, flex-start, flex-end */
+.text-editor{
+	float: right;
 }
-
 
